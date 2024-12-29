@@ -1,0 +1,16 @@
+The solution involves removing the use of `margin: 0 auto;` entirely and applying horizontal centering using flexbox properties instead. Here is the corrected CSS:
+
+```css
+.container {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+```
+
+By using `justify-content: center;` on the container, the flex items are correctly centered horizontally without relying on the problematic `margin: 0 auto;` approach.  This ensures cross-browser compatibility and avoids unexpected behavior.
