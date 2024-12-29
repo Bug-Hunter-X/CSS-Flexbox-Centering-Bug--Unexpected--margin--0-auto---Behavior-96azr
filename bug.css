@@ -1,0 +1,20 @@
+The following CSS code snippet demonstrates an uncommon error that can be quite difficult to debug:
+
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  /* The problematic line */
+  margin: 0 auto; /* This should center items, but it doesn't always work as expected with flexbox */
+}
+```
+
+The issue arises when attempting to center flex items horizontally using `margin: 0 auto;`. While this approach works well with block-level elements, it can produce unpredictable results in flex containers. The `margin: 0 auto;` rule relies on the element having a defined width and setting left and right margins to auto, which only works reliably in block-level contexts.
+
+In this case, the flexbox layout handles item alignment differently, and the auto margins might not be interpreted as expected.  The items might not be horizontally centered, or the centering behavior might be inconsistent across browsers.
